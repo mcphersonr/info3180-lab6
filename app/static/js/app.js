@@ -60,7 +60,7 @@ const NewsList=Vue.component('news-list',{
     </div>`,
         created: function() {
             let self =this;
-            fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=7012525eb4bf4c66823e49bfd730082f')
+            fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=')
             .then(function(response) {
                 return response.json();
             })
@@ -80,7 +80,7 @@ const NewsList=Vue.component('news-list',{
         methods: {
             searchNews: function() {
                 let self = this;
-                fetch('https://newsapi.org/v2/everything?q='+self.searchTerm + '&language=en&apiKey=7012525eb4bf4c66823e49bfd730082f')
+                fetch('https://newsapi.org/v2/everything?q='+self.searchTerm + '&language=en&apiKey=')
                 .then(function(response) {
                     return response.json();
                 })
